@@ -356,7 +356,7 @@ ul {
 }
 .landing .go-down {
   position: absolute;
-  bottom: 40px;
+  bottom: 50px;
   left: 50%;
   transform: translateX(-50%);
   color: var(--main-color);
@@ -1269,7 +1269,7 @@ ul {
   border: 2px solid var(--main-color);
   border-radius: 6px;
   margin: 30px auto 40px;
-  padding: 17px 25px;
+  padding: 15px 20px;
   font-weight: bold;
   transition: var(--main-transition);
 }
