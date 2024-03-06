@@ -362,6 +362,11 @@ ul {
   color: var(--main-color);
   transition: var(--main-transition);
 }
+@media (max-width: 767px) {
+  .landing .go-down {
+    bottom: 200px;
+  }
+}
 .landing .go-down:hover {
   color: var(--main-color-alt);
 }
@@ -1639,6 +1644,9 @@ ul {
   }
   .footer .box .line i {
     margin: 0 auto 20px;
+  }
+  .footer .footer-gallery {
+    text-align: center;
   }
 }
 .footer .footer-gallery img {
