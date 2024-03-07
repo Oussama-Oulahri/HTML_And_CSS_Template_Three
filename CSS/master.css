@@ -97,10 +97,12 @@ ul {
 .main-title:hover::before {
   z-index: -1;
   animation: fill-left 0.5s linear forwards;
+  -webkit-animation: fill-left 0.5s linear forwards;
 }
 .main-title:hover::after {
   z-index: -1;
   animation: fill-right 0.5s linear forwards;
+  -webkit-animation: fill-right 0.5s linear forwards;
 }
 @keyframes fill-left {
   40% {
@@ -115,7 +117,33 @@ ul {
     height: 100%;
   }
 }
+@-webkit-keyframes fill-left {
+  40% {
+    left: 0;
+    width: 15px;
+    height: 15px;
+  }
+  100% {
+    left: 0;
+    border-radius: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
 @keyframes fill-right {
+  40% {
+    right: 0;
+    width: 15px;
+    height: 15px;
+  }
+  100% {
+    right: 0;
+    border-radius: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+@-webkit-keyframes fill-right {
   40% {
     right: 0;
     width: 15px;
@@ -348,6 +376,7 @@ ul {
   width: 600px;
   position: relative;
   animation: up-and-down 5s linear infinite;
+  -webkit-animation: up-and-down 5s linear infinite;
 }
 @media (max-width: 991px) {
   .landing .image {
@@ -372,6 +401,7 @@ ul {
 }
 .landing .go-down i {
   animation: bouncing 1.7s infinite;
+  -webkit-animation: bouncing 1.7s infinite;
 }
 
 .landing .go-down:hover {
@@ -387,7 +417,32 @@ ul {
     top: -40px;
   }
 }
+@-webkit-keyframes up-and-down {
+  0%,
+  100% {
+    top: 0;
+  }
+  50% {
+    top: -40px;
+  }
+}
 @keyframes bouncing {
+  0%,
+  10%,
+  20%,
+  30%,
+  50%,
+  70%,
+  90%,
+  100% {
+    transform: translateY(0);
+  }
+  40%,
+  60% {
+    transform: translateY(20px);
+  }
+}
+@-webkit-keyframes bouncing {
   0%,
   10%,
   20%,
@@ -462,8 +517,14 @@ ul {
 }
 .articles .box:hover .info i {
   animation: move-right 0.7s linear infinite;
+  -webkit-animation: move-right 0.7s linear infinite;
 }
 @keyframes move-right {
+  100% {
+    transform: translateX(10px);
+  }
+}
+@-webkit-keyframes move-right {
   100% {
     transform: translateX(10px);
   }
@@ -506,6 +567,7 @@ ul {
 }
 .gallery .box .image:hover::before {
   animation: flash 0.7s;
+  -webkit-animation: flash 0.7s;
 }
 .gallery .box .image img {
   max-width: 100%;
@@ -515,6 +577,17 @@ ul {
   transform: scale(1.1) rotate(6deg);
 }
 @keyframes flash {
+  0%,
+  40% {
+    opacity: 1;
+  }
+  100% {
+    width: 200%;
+    height: 200%;
+    opacity: 0;
+  }
+}
+@-webkit-keyframes flash {
   0%,
   40% {
     opacity: 1;
@@ -1438,6 +1511,7 @@ ul {
   align-items: center;
   z-index: 1;
   animation: backgrounde 10s linear infinite;
+  -webkit-animation: backgrounde 10s linear infinite;
 }
 @media (max-width: 991px) {
   .discount .image {
@@ -1512,6 +1586,15 @@ ul {
 }
 /* ? keyframes */
 @keyframes backgrounde {
+  0%,
+  100% {
+    background-image: url(../images/discount-background1.jpg);
+  }
+  50% {
+    background-image: url(../images/discount-background2.jpg);
+  }
+}
+@-webkit-keyframes backgrounde {
   0%,
   100% {
     background-image: url(../images/discount-background1.jpg);
